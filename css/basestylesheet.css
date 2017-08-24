@@ -1,0 +1,472 @@
+/*39a0ac = Color*/
+
+body, html{
+    margin: 0;
+    padding: 0;
+    /*overflow-x:  hidden;*/
+    /*height: 100%;*/
+
+}
+h1 {
+  font-family: "Raleway";
+  font-size: 3em;
+  color: #333;
+}
+p {
+  font-family: "Comfortaa";
+  text-align: center;
+}
+h2 {
+  font-family: "Open Sans Condensed";
+}
+
+/*Header*/
+  #active{
+    text-decoration: underline;
+}
+ .menu{
+     height: 7vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: auto !important;
+     background: rgba(0, 0, 0, 0.57);
+     transition: background-color 500ms;
+     display: flex;
+     z-index: 511;
+ }
+ .largura{
+     width: 900px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ .largura img{
+   margin-top: 4px;
+     height: 42px;
+     width: 264px;
+ }
+ .largura ul{
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.3em;
+ }
+ .largura ul a{
+     margin: 0 20px;
+     text-decoration: none;
+     color: #eee;
+ }
+ .largura ul a:hover{
+     color: #aaa;
+ }
+
+
+/**/
+/*Intro*/
+.intro{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto 6.8vh;
+    grid-template-columns: 1fr;
+    align-items: end;
+}
+
+.intro a{
+    margin: 0 auto;
+    height: 68px;
+    transition: all 0.5s;
+    grid-row: 1 / 3;
+    grid-column: 1;
+
+}
+.intro .main-content{
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+}
+
+#home{
+    background: url("../img/guitar.jpg");
+    background-size: cover;
+}
+#contact{
+    background: url("../img/bass.jpg");
+    background-size: cover;
+    filter: grayscale(50);
+}
+#agenda{
+    background: url("../img/drums.jpg");
+    background-size: cover;
+    filter: grayscale(50);
+}
+#about{
+    background: url("../img/keyboard.jpg");
+    background-size: cover;
+    filter: grayscale(50);
+}
+
+#sc {
+  /*padding-top: 40px;*/
+
+}
+
+/**/
+
+/*Social*/
+.social{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                ". . "
+                "header1 header2"
+                "line1 line2"
+                ". subheader2"
+                "img links"
+                "paragraph .";
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    height: 93vh;
+    margin-top: 7vh;
+
+}
+.social h1{
+    margin: 12px 0 5px;
+}
+.social h3{
+    color: #333;
+    font-family: "Raleway";
+}
+.social #hd1{
+    grid-area: header1;
+    text-align: center;
+}
+.social #hd2{
+    grid-area: header2;
+    text-align: center;
+}
+.social .line1{
+    grid-area: line1;
+    border-bottom: 2px solid #333;
+    width: 200px;
+}
+.social .line2{
+    grid-area: line2;
+    border-bottom: 2px solid #333;
+    width: 200px;
+}
+.social h3{
+    grid-area: subheader2;
+}
+.social img{
+    grid-area: img;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 2px;
+    border: 2px solid #333;
+}
+.social p{
+    grid-area: paragraph;
+    max-width: 600px;
+}
+.social .links{
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+}
+.social .links a{
+    border: 2px solid #333;
+    padding: 20px 40px;
+    width: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+.social .links a:hover{
+    background-color: #333;
+    color: white;
+}
+/*Integrantes*/
+.integrantes{
+    /*height: 90vh;*/
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    background: linear-gradient(to bottom, #fff 0%, #000 20%, #000 80%, #e6e6e6 100%);
+    padding: 20px 0;
+
+}
+
+.integrante{
+    height: 70vh;
+    background-size: 100% 70vh;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.integrante:hover{
+    filter: unset;
+}
+.integrante:hover .int_hide{
+    opacity: 1;
+    transform: translateY(10px);
+}
+.int_hide{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s;
+    will-change: opacity;
+    transition: transform 0.6s;
+    will-change: transform;
+    margin: 0;
+}
+.hide{
+    height: 55px;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 1s;
+    will-change: opacity;
+}
+.integrante:hover .hide{
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+.integrantes a{
+    text-decoration: none;
+}
+.integrante h2{
+    margin: 0 0 10px 0;
+    /*background-color: rgba(255, 255, 255, 0.6);*/
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    border-top:  2px solid rgba(255, 255, 255, 0.4);
+    color: gainsboro;
+}
+
+
+/*Gradient*/
+
+.gd:first-of-type{
+    height: 80px;
+    background: linear-gradient(-1.3deg, #000 0%, #000 53%, rgba(230,230,230,0) 54%);
+}
+.gd{
+    height: 80px;
+    background: linear-gradient(1.3deg, rgba(230,230,230,1) 0%, rgba(230,230,230,1) 53%, #000 54%, #000 100%);
+}
+
+#gd_cinza{
+    height: 80px;
+    background: linear-gradient(-1.3deg, #E6E6E6 0%, #E6E6E6 53%, rgba(230,230,230,0) 54%);
+}
+#gd_cinza_black{
+    height: 80px;
+    background: linear-gradient(-1.3deg, #E6E6E6 0%, #E6E6E6 53%, rgb(0,0,0) 54%);
+}
+/*Footer*/
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*height: 220px;*/
+    background-color: #e6e6e6;
+    font-family: "Raleway";
+    color: #333;
+}
+.footer .contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px;
+}
+.footer .contact h1{
+    text-align: center;
+}
+.footer .contact a{
+  font-size: 34px;
+  text-align: center;
+  color: #333;
+  margin: 0 10px;
+  background-color: #e6e6e6;
+  padding: 4px 8px;
+  border: 2px solid #333;
+  border-radius: 50px;
+}
+.footer .contact a:hover{
+  color: #e6e6e6;
+  background-color: #333;
+}
+
+.footer .contact ul{
+  display: flex;
+  text-align: center;
+  list-style: none;
+  align-self: center;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.footer img{
+    width: 110px;
+    justify-self: center;
+    align-self: center;
+    margin: 10px 0 0 0;
+    opacity: 0.5;
+}
+.footer .fc{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px;
+}
+.footer .fc h1{
+    text-align: center;
+}
+.footer .fc span{
+    text-align: center;
+    align-self: center;
+    font-family: "Comfortaa";
+    color: #444;
+}
+.footer .fc span a{
+    color: inherit;
+    text-decoration: none;
+}
+.footer .fc span a:hover{
+    text-decoration: underline;
+}
+.footer h1{
+    font-size: 3em;
+    margin: 0;
+    align-self: center;
+}
+.translate {
+  transition: 0.5s;
+}
+.translate:hover {
+  transform: translateY(-5px);
+}
+/*Copy*/
+.copyright{
+    background: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7em;
+}
+.copyright a, .copyright a:visited{
+    color: #444;
+    text-decoration: none;
+}
+
+
+/*Responsive design*/
+
+
+
+@media all and (max-width: 1024px){
+  .largura {
+    width: auto;
+  }
+  .social {
+    margin-top: 10vh;
+  }
+  .social img {
+    width: 250px;
+    height: 250px;
+  }
+  .integrantes {
+    margin-top: 10vh;
+  }
+  .footer h1{
+      font-size: 2em;
+  }
+  .footer img{
+      width: 95px;
+  }
+  .social p{
+      font-size: 0.9em;
+      max-width: 400px;
+  }
+}
+@media all and (max-width: 768px){
+  .largura:first-child {
+    display: none;
+  }
+  .footer{
+      padding: 0 20px;
+  }
+  .footer h1{
+      font-size: 1.8em;
+  }
+  .footer img{
+      margin: 0px -25px 0 0;
+  }
+  .integrante{
+      height: 45vh;
+      background-size: 100% 45vh;
+  }
+  .integrante h2{
+      font-size: 1em;
+  }
+  .social{
+      grid-template-columns: 1fr;
+      margin-top: 0;
+  }
+  .social .links, .social h3, .social #hd2, .social .line2{
+      display: none;
+  }
+  .social p{
+      max-width: 600px;
+  }
+  .social img{
+      margin-top: 20px;
+  }
+  .hide{
+      height: 30px;
+  }
+  .integrante:hover .int_hide{
+      transform: translateY(4px);
+  }
+}
+
+@media all and (max-width: 480px){
+    .largura ul{
+        font-size: 1.1em;
+        padding: 0;
+    }
+    #home{
+        background-size: 100% 100%;
+    }
+    .social p{
+        max-width: 400px;
+    }
+    .social img{
+        width: 210px;
+        height: 210px;
+    }
+    .integrantes{
+        display: none;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+
+    }
+    .footer h1{
+        font-size: 1.5em;
+    }
+    .footer img{
+        display: none;
+    }
+    .footer .fc span{
+        margin-bottom: 20px;
+    }
+}

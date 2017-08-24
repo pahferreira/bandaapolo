@@ -1,0 +1,75 @@
+.schedule h1 {
+  font-family: 'Raleway';
+  text-align: center;
+  font-size: 3em;
+  color: #333;
+}
+
+.schedule-imgs {
+  display: flex;
+  justify-content: center;
+}
+.schedule-imgs div {
+  width: 200px;
+  height: 300px;
+  margin: 0 10px;
+  border-radius: 15px;
+  background: no-repeat center url("../img/agenda_center.png");
+  background-size: cover;
+}
+.schedule-imgs div img {
+  width: 100px;
+  height: 200px;
+  filter: opacity(0.8) brightness(1);
+}
+.schedule-imgs .center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.schedule-imgs div:first-child{
+  border-radius: 50px 15px 15px 50px;
+  background-image: url("../img/agenda_left.png");
+}
+.schedule-imgs div:last-child{
+  border-radius: 15px 50px 50px 15px;
+  background-image: url("../img/agenda_right.png");
+}
+
+.schedule-content {
+  text-align: center;
+}
+
+.schedule-content ul {
+  list-style: none;
+  padding-left: 0;
+  font-family: 'Comfortaa';
+}
+
+.schedule-content a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.schedule-content a:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.schedule-content a:hover {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 480px){
+    .schedule h1{
+        font-size: 2em;
+    }
+    .schedule-imgs div{
+        width: 125px;
+        height: 250px;
+        margin: 0px 6px;
+    }
+    .schedule{
+        padding-top: 40px;
+    }
+}
