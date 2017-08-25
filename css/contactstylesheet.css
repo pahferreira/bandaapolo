@@ -34,7 +34,6 @@ form legend {
 
 .form-div {
   margin: auto;
-  margin-bottom: 20px;
   width: 500px;
   height: auto;
 }
@@ -44,7 +43,19 @@ form legend {
     }
     .form-div{
         width: 300px;
-        margin-left: 4px;
-        margin-right: 4px;
+        margin: 4px;
+    }
+}
+@media all and (max-width: 425px){
+    .message-box{
+        width: 372px;
+    }
+}
+@media all and (max-width: 425px){
+    .message-box{
+        width: 328px;
+    }
+    .user-contact{
+        width: 320px;
     }
 }

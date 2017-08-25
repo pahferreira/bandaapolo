@@ -66,7 +66,7 @@ body{
 
 @media all and (max-width: 480px){
   .content .content-display p {
-    width: 400px;
+    width: 90%;
   }
   .content .content-display h1 {
     font-size: 3em;
@@ -76,5 +76,17 @@ body{
   }
   .content .content-display .downline, .content .content-display .upline {
     display: none;
+  }
+}
+
+@media all and (max-width: 325px){
+  .content .content-display h1 {
+    font-size: 2.5em;
+  }
+  .content img {
+    width: 200px;
+  }
+  .content a {
+    font-size: 0.9em;
   }
 }
